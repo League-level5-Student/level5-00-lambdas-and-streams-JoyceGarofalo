@@ -25,9 +25,12 @@ public class LambdaMethods {
 			String caps = s.toUpperCase();
 			String low = s.toLowerCase();
 			for (int i = 0; i < s.length(); i++) {
-				s = s.replace(s.charAt(i), caps.charAt(i));
+				if(i%2==0) {
+					s = s.replace(s.charAt(i), caps.charAt(i));
+				}
+				
 			}
-			System.out.println("s");
+			System.out.println(s);
 		}, "repeat");
 		//4. Call the printCustonMessage method using a lambda so that the String prints with a period in between each character.
 		printCustomMessage((s)->{
